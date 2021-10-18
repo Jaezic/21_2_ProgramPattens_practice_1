@@ -30,12 +30,12 @@ void sort_by_height(struct XYZ *xyz)
 {
     for (int j = 0; j < NUM - 1; j++)
     {
-        for (int i = NUM - 1; j > i; i--)
+        for (int i = NUM - 1; j < i; i--)
 
         {
-            if (xyz[i].height < xyz[i + 1].height)
+            if (xyz[i].height < xyz[i - 1].height)
             {
-                swap(&xyz[i], &xyz[i + 1]);
+                swap(&xyz[i - 1], &xyz[i]);
             }
         }
     }

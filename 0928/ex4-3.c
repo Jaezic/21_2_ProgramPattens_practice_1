@@ -45,7 +45,7 @@ void sort_by_depth(struct XYZ *xyz)
 {
     for (int j = 0; j < NUM - 1; j++)
     {
-        for (int i = NUM - 1; j > i; i--)
+        for (int i = NUM - 1; i > j; i--)
 
         {
             if (xyz[i].depth < xyz[i + 1].depth)
